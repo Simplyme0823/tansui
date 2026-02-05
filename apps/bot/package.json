@@ -1,0 +1,28 @@
+{
+  "name": "@tansui/bot",
+  "version": "0.0.1",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "start:worker": "node dist/worker.js",
+    "set-webhook": "node dist/scripts/set-webhook.js",
+    "delete-webhook": "node dist/scripts/delete-webhook.js",
+    "get-webhook-info": "node dist/scripts/get-webhook-info.js",
+    "lint": "eslint src --ext .ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "1.13.0",
+    "@tansui/core": "workspace:*",
+    "@tansui/types": "workspace:*",
+    "bullmq": "5.67.2",
+    "dotenv": "16.4.7",
+    "hono": "4.6.12",
+    "ioredis": "5.4.2",
+    "node-telegram-bot-api": "0.67.0"
+  },
+  "devDependencies": {
+    "@types/node-telegram-bot-api": "0.64.13"
+  }
+}
